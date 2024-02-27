@@ -10,19 +10,10 @@
 </head>
 <body>
     <div class="container col-sm-4 mx-auto mt-3">
-        <h1 class="text-center" >Enter The Details</h1>
-        <form action="add">
-            <div class="mb-3">
-                <label for="num1" class="form-label"> Enter Num1</label>
-                <input type="text" class="form-control" id="num1" name="num1">
-            </div>
-            <div class="mb-3">
-                <label for="num2" class="form-label"> Enter Num2 </label>
-                <input type="text" class="form-control" id="num2" name="num2">
-            </div>
-            <input type="submit" value="Submit" class="btn btn-primary" >
-<%--            <button type="submit" class="btn btn-primary">Submit</button>--%>
-        </form>
+        <h1 class="text-center" >
+            Result is : <span><%= session.getAttribute("result") %></span> 
+        </h1>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

@@ -14,7 +14,7 @@
             Student  :
         </h1>
 
-        <h4> ${ student.toString() } </h4>
+        <h4> ${ student } </h4>
 
         <h3>Welcome to ${ course } world</h3>
 

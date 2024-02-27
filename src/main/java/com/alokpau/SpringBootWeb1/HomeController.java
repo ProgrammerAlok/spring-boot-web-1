@@ -30,14 +30,7 @@ public class HomeController {
     }
 
     @RequestMapping("addStudent")
-    public ModelAndView addStudent(
-            @RequestParam("sroll") String roll,
-            @RequestParam("sname") String name,
-            ModelAndView mv
-    ) {
-        Student student = new Student();
-        student.setSroll(101);
-        student.setSname("java");
+    public ModelAndView addStudent(Student student, ModelAndView mv) {
         mv.addObject("student", student);
         mv.setViewName("studentDetails");
         return mv;

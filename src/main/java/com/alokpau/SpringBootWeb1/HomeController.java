@@ -14,10 +14,10 @@ public class HomeController {
     @RequestMapping("/")
     public String home() {
         System.out.println("Home method called");
-        return "index";
+        return "student";
     }
 
-    @RequestMapping("/add")
+    @RequestMapping("add")
     public ModelAndView add(
             @RequestParam("num1") int a,
             @RequestParam("num2") int b,
@@ -26,6 +26,20 @@ public class HomeController {
         // int result = Integer.parseInt(req.getParameter("num1")) + Integer.parseInt(req.getParameter("num2"));
         mv.addObject("result", a+b);
         mv.setViewName("result");
+        return mv;
+    }
+
+    @RequestMapping("addStudent")
+    public ModelAndView addStudent(
+            @RequestParam("sroll") String roll,
+            @RequestParam("sname") String name,
+            ModelAndView mv
+    ) {
+        Student student = new Student();
+        student.setSroll(101);
+        student.setSname("java");
+        mv.addObject("student", student);
+        mv.setViewName("studentDetails");
         return mv;
     }
 }

@@ -31,7 +31,7 @@ public class HomeController {
     }
 
     @RequestMapping("addStudent")
-    public String addStudent(@ModelAttribute Student student) {
+    public String addStudent(Student student) {
         return "studentDetails";
     }
 }

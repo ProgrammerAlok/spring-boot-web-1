@@ -3,6 +3,7 @@ package com.alokpau.SpringBootWeb1;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -19,11 +20,10 @@ public class HomeController {
     public String add(
             @RequestParam("num1") int a,
             @RequestParam("num2") int b,
-            HttpSession session
+            Model model
     ) {
         // int result = Integer.parseInt(req.getParameter("num1")) + Integer.parseInt(req.getParameter("num2"));
-        int result = a + b;
-        session.setAttribute("result", result);
+        model.addAttribute("result", a+b);
         return "result.jsp";
     }
 }

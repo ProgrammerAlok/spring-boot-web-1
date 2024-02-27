@@ -11,7 +11,7 @@
 <body>
     <div class="container col-sm-4 mx-auto mt-3">
         <h1 class="text-center" >
-            Result is : <span><%= session.getAttribute("result") %></span>
+            Result is : ${ result }
         </h1>
 
     </div>
